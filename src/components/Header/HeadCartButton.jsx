@@ -4,7 +4,7 @@ import React from "react";
 
 function HeadCartButton(){
    return (
-    <button className="" >
+    <button  >
     <span className="icon">
         <CartIcon/> 
     </span>
