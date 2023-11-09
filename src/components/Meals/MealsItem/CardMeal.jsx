@@ -1,19 +1,19 @@
 import React from "react";
-import "./cardMeal.css";
+import "./mealItem.css";
+import CardMealForm from "./cardMealForm";
 
 
 function CardMeal(props){
 
       const price= `$${props.price.toFixed(2)}`
 return(
-  <li >
-<div className="meals card">
+  <li className="meal card">
+     <div >
         <h3> {props.name}</h3>
-       <p><div>  {props.description}</div></p> 
+        <p><div>  {props.description}</div></p> 
         <div>{price}</div>
-        </div>
-        <div> </div>
-
+     </div>   
+      <div><CardMealForm/></div>
   </li>)
 
 }
