@@ -1,10 +1,14 @@
 import React from "react";
- import CartIcon from "../Carts/CartIcon";
+ import CartIcon from "../Cart/CartIcon";
+ import  "./headers.css"
+ 
 
 
-function HeadCartButton(){
+function HeadCartButton(props){
+    
+
    return (
-    <button  >
+    <button onClick={props.onClick} >
     <span className="icon">
         <CartIcon/> 
     </span>
