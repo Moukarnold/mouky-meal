@@ -37,6 +37,7 @@ function AvalaibleMeals(){
     <li> 
          <CardMeal 
          key={meals.key}
+         id={meals.id}
          name= {meals.name}
          description = {meals.description}
          price= {meals.price} /> 
