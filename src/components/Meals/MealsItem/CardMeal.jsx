@@ -1,11 +1,26 @@
 import React from "react";
 import "./mealItem.css";
 import CardMealForm from "./cardMealForm";
+import CartContext from "../../../store/CartContext";
+import { useContext } from "react";
 
 
 function CardMeal(props){
 
+   const cartCtx= useContext(CartContext);
       const price= `$${props.price.toFixed(2)}`
+ 
+      function addToCartHandler(amount){
+           cartCtx.addItem({
+            id: props.id,
+            name: props.name,
+            amount:amount,
+            price: props.price
+           });
+
+      }
+      
+
 return(
   <li className="meal card">
      <div >
@@ -13,7 +28,7 @@ return(
         <p><div>  {props.description}</div></p> 
         <div>{price}</div>
      </div>   
-      <div><CardMealForm/></div>
+      <div><CardMealForm onAddToCart={addToCartHandler} /></div>
   </li>)
 
 }
