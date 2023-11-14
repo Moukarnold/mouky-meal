@@ -5,16 +5,16 @@ import { useReducer } from "react";
 
 const defaultCartState={
      items:[],
-     totalamount:0
+     totalAmount:0
 };
 
 const cardReducer=(state, action)=>{
    if(action.type==="ADD"){
     const updatedItems= state.items.concat(action.item);
-    const updatedTotalAmount= state.totalamount+action.item.price* action.item.amount;
+    const updatedTotalAmount= state.totalAmount+action.item.price* action.item.amount;
     return{
         items:updatedItems,
-        totalamount: updatedTotalAmount
+        totalAmount: updatedTotalAmount
     }
    }
 
@@ -33,7 +33,7 @@ const CartProvider= props =>{
   };
     const cartContxt = {
         items:cartState.items,
-        totalamount:cartState.totalamount,
+        totalAmount:cartState.totalAmount,
         addItem:addItemToCartHandler,
         removeItem:removeItemFromCartHandler
     }
