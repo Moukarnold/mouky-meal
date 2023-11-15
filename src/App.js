@@ -1,7 +1,7 @@
 import React from "react";
+import Cart from "./components/Cart/Cart";
 import Headers from "./components/Header/Headers";
 import Meals from "./components/Meals/Meals";
-import Cart from "./components/Cart/Cart";
 import { useState } from "react";
 import CartProvider from "./store/CardProvider";
 
