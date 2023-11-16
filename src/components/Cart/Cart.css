@@ -22,11 +22,11 @@
     margin: 1rem 0;
   }
   
-  .actions {
+  .action {
     text-align: right;
   }
   
-  .actions button {
+  .action button {
     font: inherit;
     cursor: pointer;
     background-color: transparent;
@@ -36,18 +36,18 @@
     margin-left: 1rem;
   }
   
-  .actions button:hover,
-  .actions button:active {
+  .action button:hover,
+  .action button:active {
     background-color: #5a1a01;
     border-color: #5a1a01;
     color: white;
   }
   
-  .actions .button--alt {
+  .action .button--alt {
     color: #8a2b06;
   }
   
-  .actions .button {
+  .action .button {
     background-color: #8a2b06;
     color: white;
   }
